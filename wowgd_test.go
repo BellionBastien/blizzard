@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/FuzzyStatic/blizzard/v3/wowgd"
+	"github.com/BellionBastien/blizzard/v3/wowgd"
 	"github.com/FuzzyStatic/blizzard/v3/wowsearch"
 )
 

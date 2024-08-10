@@ -1,8 +1,9 @@
-module github.com/FuzzyStatic/blizzard/v3
+module github.com/BellionBastien/blizzard/v3
 
 go 1.20
 
 require (
+	github.com/FuzzyStatic/blizzard/v3 v3.0.15
 	github.com/go-playground/validator/v10 v10.11.2
 	golang.org/x/oauth2 v0.5.0
 )

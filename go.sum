@@ -1,3 +1,5 @@
+github.com/FuzzyStatic/blizzard/v3 v3.0.15 h1:skP74W8NryVF8XdEG0EIKIT0rJmko5hcRsNWK3vJ1jM=
+github.com/FuzzyStatic/blizzard/v3 v3.0.15/go.mod h1:sV+Ie2uts0Av/Szeoz5x2mtD5XusMInU0KcjjP+yvS4=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/go-playground/assert/v2 v2.2.0 h1:JvknZsQTYeFEAhQwI4qEt9cyV5ONwRHC+lYKSsYSR8s=
