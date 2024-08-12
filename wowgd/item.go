@@ -187,6 +187,12 @@ type Item struct {
 		} `json:"name_description"`
 	} `json:"preview_item"`
 	PurchaseQuantity int `json:"purchase_quantity"`
+	Appearances      []struct {
+		Key struct {
+			Href string `json:"href"`
+		} `json:"key"`
+		ID int `json:"id"`
+	} `json:"appearances"`
 }
 
 // ItemMedia structure
