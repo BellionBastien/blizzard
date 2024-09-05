@@ -439,30 +439,6 @@ func (c *Client) getStructDataOAuth(ctx context.Context, pathAndQuery, namespace
 }
 
 func validateRegionLocalePair(region Region, locale Locale) error {
-	switch locale {
-	case EnUS, EsMX, PtBR:
-		if region != US {
-			return ErrInvalidLocaleForRegion
-		}
-	case EnGB, EsES, FrFR, RuRU, PtPT, DeDE, ItIT:
-		if region != EU {
-			return ErrInvalidLocaleForRegion
-		}
-	case KoKR:
-		if region != KR {
-			return ErrInvalidLocaleForRegion
-		}
-	case ZhTW:
-		if region != TW {
-			return ErrInvalidLocaleForRegion
-		}
-	case ZhCN:
-		if region != CN {
-			return ErrInvalidLocaleForRegion
-		}
-	default:
-		return ErrUnknownLocale
-	}
 
 	return nil
 }
