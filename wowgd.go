@@ -1192,7 +1192,7 @@ func (c *Client) WoWReputationFactionsIndex(ctx context.Context) (*wowgd.Reputat
 // WoWReputationFaction returns a single reputation faction by ID.
 func (c *Client) WoWReputationFaction(ctx context.Context, reputationFactionID int) (*wowgd.ReputationFaction, *Header, error) {
 	dat, header, err := c.getStructData(ctx,
-		fmt.Sprintf("/data/wow/pvp-tier/%d", reputationFactionID),
+		fmt.Sprintf("/data/wow/reputation-faction/%d", reputationFactionID),
 		c.GetStaticNamespace(),
 		&wowgd.ReputationFaction{},
 	)
