@@ -105,10 +105,10 @@ type Heilroom struct {
 				Display struct {
 					DisplayString string `json:"display_string"`
 					Color         struct {
-						R int `json:"r"`
-						G int `json:"g"`
-						B int `json:"b"`
-						A int `json:"a"`
+						R float64 `json:"r"`
+						G float64 `json:"g"`
+						B float64 `json:"b"`
+						A float64 `json:"a"`
 					} `json:"color"`
 				} `json:"display"`
 				IsEquipBonus bool `json:"is_equip_bonus,omitempty"`
