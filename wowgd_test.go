@@ -345,6 +345,30 @@ func TestWoWGuildCrestEmblemMedia(t *testing.T) {
 	}
 }
 
+func TestWoWHeirloomIndex(t *testing.T) {
+	dat, _, err := usClient.WoWHeirloomIndex(context.Background())
+	if err != nil {
+		fmt.Println(err)
+		t.Fail()
+	}
+
+	if printOutput != "" {
+		fmt.Printf("%+v\n", dat)
+	}
+}
+
+func TestWoWHeirloom(t *testing.T) {
+	dat, _, err := usClient.WoWHeirloom(context.Background(), 1)
+	if err != nil {
+		fmt.Println(err)
+		t.Fail()
+	}
+
+	if printOutput != "" {
+		fmt.Printf("%+v\n", dat)
+	}
+}
+
 func TestWoWItemClassesIndex(t *testing.T) {
 	dat, _, err := usClient.WoWItemClassesIndex(context.Background())
 	if err != nil {
@@ -1608,6 +1632,30 @@ func TestWoWTitlesIndex(t *testing.T) {
 
 func TestWoWTitle(t *testing.T) {
 	dat, _, err := usClient.WoWTitle(context.Background(), 1)
+	if err != nil {
+		fmt.Println(err)
+		t.Fail()
+	}
+
+	if printOutput != "" {
+		fmt.Printf("%+v\n", dat)
+	}
+}
+
+func TestWoWToyIndex(t *testing.T) {
+	dat, _, err := usClient.WoWToyIndex(context.Background())
+	if err != nil {
+		fmt.Println(err)
+		t.Fail()
+	}
+
+	if printOutput != "" {
+		fmt.Printf("%+v\n", dat)
+	}
+}
+
+func TestWoWToy(t *testing.T) {
+	dat, _, err := usClient.WoWToy(context.Background(), 6)
 	if err != nil {
 		fmt.Println(err)
 		t.Fail()

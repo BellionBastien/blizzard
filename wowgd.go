@@ -299,6 +299,26 @@ func (c *Client) WoWGuildCrestEmblemMedia(ctx context.Context, emblemID int) (*w
 	return dat.(*wowgd.GuildCrestEmblemMedia), header, err
 }
 
+// WoWHeirloomIndex returns an index of heirlooms.
+func (c *Client) WoWHeirloomIndex(ctx context.Context) (*wowgd.HeirloomIndex, *Header, error) {
+	dat, header, err := c.getStructData(ctx,
+		"/data/wow/heirloom/index",
+		c.GetStaticNamespace(),
+		&wowgd.HeirloomIndex{},
+	)
+	return dat.(*wowgd.HeirloomIndex), header, err
+}
+
+// WoWHeilroom returns a heilroom by ID.
+func (c *Client) WoWHeirloom(ctx context.Context, heirloomId int) (*wowgd.Heilroom, *Header, error) {
+	dat, header, err := c.getStructData(ctx,
+		fmt.Sprintf("/data/wow/heirloom/%d", heirloomId),
+		c.GetStaticNamespace(),
+		&wowgd.Heilroom{},
+	)
+	return dat.(*wowgd.Heilroom), header, err
+}
+
 // WoWItemClassesIndex returns an index of item classes.
 func (c *Client) WoWItemClassesIndex(ctx context.Context) (*wowgd.ItemClassesIndex, *Header, error) {
 	dat, header, err := c.getStructData(ctx,
@@ -1359,6 +1379,26 @@ func (c *Client) WoWTitle(ctx context.Context, titleID int) (*wowgd.Title, *Head
 		&wowgd.Title{},
 	)
 	return dat.(*wowgd.Title), header, err
+}
+
+// WoWToyIndex returns an index of toys.
+func (c *Client) WoWToyIndex(ctx context.Context) (*wowgd.ToyIndex, *Header, error) {
+	dat, header, err := c.getStructData(ctx,
+		"/data/wow/toy/index",
+		c.GetStaticNamespace(),
+		&wowgd.ToyIndex{},
+	)
+	return dat.(*wowgd.ToyIndex), header, err
+}
+
+// WoWToy returns a toy by ID.
+func (c *Client) WoWToy(ctx context.Context, toyId int) (*wowgd.Toy, *Header, error) {
+	dat, header, err := c.getStructData(ctx,
+		fmt.Sprintf("/data/wow/toy/%d", toyId),
+		c.GetStaticNamespace(),
+		&wowgd.Toy{},
+	)
+	return dat.(*wowgd.Toy), header, err
 }
 
 // WoWToken returns the WoW Token index
